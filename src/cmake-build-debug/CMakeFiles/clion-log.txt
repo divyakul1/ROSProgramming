@@ -1,0 +1,34 @@
+/home/divyak/Documents/clion-2017.2.2/bin/cmake/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/divyak/catkin_ws/src
+-- Using CATKIN_DEVEL_PREFIX: /home/divyak/catkin_ws/src/cmake-build-debug/devel
+-- Using CMAKE_PREFIX_PATH: /home/divyak/catkin_ws/devel;/opt/ros/kinetic
+-- This workspace overlays: /home/divyak/catkin_ws/devel;/opt/ros/kinetic
+-- Using PYTHON_EXECUTABLE: /usr/bin/python
+-- Using Debian Python package layout
+-- Using empy: /usr/bin/empy
+-- Using CATKIN_ENABLE_TESTING: ON
+-- Call enable_testing()
+-- Using CATKIN_TEST_RESULTS_DIR: /home/divyak/catkin_ws/src/cmake-build-debug/test_results
+-- Found gtest sources under '/usr/src/gtest': gtests will be built
+-- Using Python nosetests: /usr/bin/nosetests-2.7
+-- catkin 0.7.6
+-- BUILD_SHARED_LIBS is on
+-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-- ~~  traversing 3 packages in topological order:
+-- ~~  - chatbot_node
+-- ~~  - counter_node
+-- ~~  - message_ui
+-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-- +++ processing catkin package: 'chatbot_node'
+-- ==> add_subdirectory(chatbot_node)
+-- Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
+-- chatbot_node: 1 messages, 0 services
+-- +++ processing catkin package: 'counter_node'
+-- ==> add_subdirectory(counter_node)
+-- Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
+-- +++ processing catkin package: 'message_ui'
+-- ==> add_subdirectory(message_ui)
+-- Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
+-- message_ui: 1 messages, 0 services
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/divyak/catkin_ws/src/cmake-build-debug

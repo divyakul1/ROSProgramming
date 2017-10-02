@@ -1,0 +1,8 @@
+prefix=/home/divyak/catkin_ws/src/cmake-build-debug/devel
+
+Name: counter_node
+Description: Description of counter_node
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/divyak/catkin_ws/src/cmake-build-debug/devel/lib 
+Requires: 

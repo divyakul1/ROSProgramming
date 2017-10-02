@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/divyak/catkin_ws/src/chatbot_node/cmake-build-debug/devel/setup.sh
