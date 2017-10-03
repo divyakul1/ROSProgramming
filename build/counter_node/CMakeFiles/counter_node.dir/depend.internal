@@ -3,6 +3,9 @@
 
 counter_node/CMakeFiles/counter_node.dir/src/counter_node.cpp.o
  /home/divyak/catkin_ws/devel/include/chatbot_node/reply_msg.h
+ /home/divyak/catkin_ws/devel/include/counter_node/counter.h
+ /home/divyak/catkin_ws/devel/include/counter_node/counterRequest.h
+ /home/divyak/catkin_ws/devel/include/counter_node/counterResponse.h
  /home/divyak/catkin_ws/devel/include/message_ui/sent_msg.h
  /home/divyak/catkin_ws/src/counter_node/src/counter_node.cpp
  /opt/ros/kinetic/include/ros/advertise_options.h

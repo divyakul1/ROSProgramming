@@ -29,6 +29,8 @@ void sent_msg_callback(const message_ui::sent_msg mess)
 
   if (mess.message.compare("Hello") == 0) {
 
+    //std:string name=ros::param::get("Name");
+
     replymessage = "Hello Divya";
     //std::cout << replymessage << '\n';
   }

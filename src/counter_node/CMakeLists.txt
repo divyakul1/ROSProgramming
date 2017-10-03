@@ -7,15 +7,27 @@ find_package(catkin REQUIRED COMPONENTS
   message_generation
 )
 
-catkin_package(
-  CATKIN_DEPENDS
+add_service_files(DIRECTORY srv
+FILES
+counter.srv
 )
+
+generate_messages(DEPENDENCIES std_msgs)
+
+catkin_package(
+  CATKIN_DEPENDS message_runtime std_msgs
+)
+
+
 
 include_directories(
 # include
   ${catkin_INCLUDE_DIRS}
   ${CATKIN_DEVEL_PREFIX}/include/
 )
+
+
+
 
 add_executable(counter_node src/counter_node.cpp)
 add_dependencies(counter_node ${catkin_EXPORTED_TARGETS})

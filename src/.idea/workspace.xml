@@ -4,11 +4,13 @@
     <generated>
       <config projectName="Project" targetName="chatbot_node_generate_messages_cpp" />
       <config projectName="Project" targetName="roscpp_generate_messages_py" />
+      <config projectName="Project" targetName="counter_node_gencpp" />
       <config projectName="Project" targetName="message_ui_gennodejs" />
       <config projectName="Project" targetName="chatbot_node_gencpp" />
       <config projectName="Project" targetName="message_ui_generate_messages_lisp" />
       <config projectName="Project" targetName="std_msgs_generate_messages_cpp" />
       <config projectName="Project" targetName="clean_test_results" />
+      <config projectName="Project" targetName="counter_node_generate_messages_py" />
       <config projectName="Project" targetName="message_ui_generate_messages_eus" />
       <config projectName="Project" targetName="gtest" />
       <config projectName="Project" targetName="chatbot_node_gennodejs" />
@@ -20,6 +22,7 @@
       <config projectName="Project" targetName="chatbot_node_generate_messages_lisp" />
       <config projectName="Project" targetName="std_msgs_generate_messages_py" />
       <config projectName="Project" targetName="roscpp_generate_messages_eus" />
+      <config projectName="Project" targetName="counter_node_geneus" />
       <config projectName="Project" targetName="doxygen" />
       <config projectName="Project" targetName="tests" />
       <config projectName="Project" targetName="chatbot_node_geneus" />
@@ -30,26 +33,35 @@
       <config projectName="Project" targetName="chatbot_node_generate_messages" />
       <config projectName="Project" targetName="_catkin_empty_exported_target" />
       <config projectName="Project" targetName="rosgraph_msgs_generate_messages_nodejs" />
+      <config projectName="Project" targetName="counter_node_gennodejs" />
       <config projectName="Project" targetName="roscpp_generate_messages_nodejs" />
       <config projectName="Project" targetName="rosgraph_msgs_generate_messages_eus" />
+      <config projectName="Project" targetName="counter_node_generate_messages" />
       <config projectName="Project" targetName="download_extra_data" />
       <config projectName="Project" targetName="chatbot_node_generate_messages_nodejs" />
       <config projectName="Project" targetName="run_tests" />
+      <config projectName="Project" targetName="counter_node_generate_messages_cpp" />
       <config projectName="Project" targetName="roscpp_generate_messages_cpp" />
+      <config projectName="Project" targetName="counter_node_genlisp" />
       <config projectName="Project" targetName="chatbot_node_genpy" />
       <config projectName="Project" targetName="message_ui_generate_messages_nodejs" />
       <config projectName="Project" targetName="chatbot_node" />
       <config projectName="Project" targetName="std_msgs_generate_messages_lisp" />
       <config projectName="Project" targetName="message_ui_gencpp" />
       <config projectName="Project" targetName="chatbot_node_genlisp" />
+      <config projectName="Project" targetName="counter_node_genpy" />
+      <config projectName="Project" targetName="_counter_node_generate_messages_check_deps_counter" />
       <config projectName="Project" targetName="_chatbot_node_generate_messages_check_deps_reply_msg" />
       <config projectName="Project" targetName="chatbot_node_generate_messages_eus" />
       <config projectName="Project" targetName="message_ui_generate_messages_py" />
       <config projectName="Project" targetName="gtest_main" />
+      <config projectName="Project" targetName="counter_node_generate_messages_eus" />
+      <config projectName="Project" targetName="counter_node_generate_messages_lisp" />
       <config projectName="Project" targetName="counter_node" />
       <config projectName="Project" targetName="roscpp_generate_messages_lisp" />
       <config projectName="Project" targetName="message_ui_generate_messages_cpp" />
       <config projectName="Project" targetName="message_ui_geneus" />
+      <config projectName="Project" targetName="counter_node_generate_messages_nodejs" />
       <config projectName="Project" targetName="chatbot_node_generate_messages_py" />
     </generated>
   </component>
@@ -70,11 +82,31 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="chatbot_node.cpp" pinned="false" current-in-tab="true">
+      <file leaf-file-name="chatbot_node.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/chatbot_node/src/chatbot_node.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="27" column="2" lean-forward="false" selection-start-line="27" selection-start-column="2" selection-end-line="27" selection-end-column="2" />
+            <state relative-caret-position="36">
+              <caret line="62" column="0" lean-forward="true" selection-start-line="62" selection-start-column="0" selection-end-line="78" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="counter_node.cpp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/counter_node/src/counter_node.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="252">
+              <caret line="14" column="29" lean-forward="false" selection-start-line="14" selection-start-column="29" selection-end-line="14" selection-end-column="29" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CMakeLists.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/counter_node/CMakeLists.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="450">
+              <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -86,6 +118,9 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/chatbot_node/src/chatbot_node.cpp" />
+        <option value="$PROJECT_DIR$/counter_node/srv/counter.srv" />
+        <option value="$PROJECT_DIR$/counter_node/CMakeLists.txt" />
+        <option value="$PROJECT_DIR$/counter_node/src/counter_node.cpp" />
       </list>
     </option>
   </component>
@@ -96,8 +131,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="819" />
-    <option name="y" value="66" />
+    <option name="x" value="1097" />
+    <option name="y" value="112" />
     <option name="width" value="928" />
     <option name="height" value="968" />
   </component>
@@ -128,25 +163,6 @@
               <item name="src" type="47feb1d3:ProjectViewModuleNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="src" type="dad4c3:CidrFilesViewHelper$MyProjectTreeStructure$1" />
-              <item name="src" type="47feb1d3:ProjectViewModuleNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="chatbot_node" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="src" type="dad4c3:CidrFilesViewHelper$MyProjectTreeStructure$1" />
-              <item name="src" type="47feb1d3:ProjectViewModuleNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="chatbot_node" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="src" type="dad4c3:CidrFilesViewHelper$MyProjectTreeStructure$1" />
-              <item name="src" type="47feb1d3:ProjectViewModuleNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="counter_node" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -176,6 +192,9 @@
       <envs />
     </configuration>
     <configuration name="_chatbot_node_generate_messages_check_deps_reply_msg" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="_chatbot_node_generate_messages_check_deps_reply_msg" CONFIG_NAME="Debug">
+      <envs />
+    </configuration>
+    <configuration name="_counter_node_generate_messages_check_deps_counter" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="_counter_node_generate_messages_check_deps_counter" CONFIG_NAME="Debug">
       <envs />
     </configuration>
     <configuration name="_message_ui_generate_messages_check_deps_sent_msg" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="_message_ui_generate_messages_check_deps_sent_msg" CONFIG_NAME="Debug">
@@ -221,6 +240,39 @@
       <envs />
     </configuration>
     <configuration name="counter_node" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="counter_node" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Project" RUN_TARGET_NAME="counter_node">
+      <envs />
+    </configuration>
+    <configuration name="counter_node_gencpp" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="counter_node_gencpp" CONFIG_NAME="Debug">
+      <envs />
+    </configuration>
+    <configuration name="counter_node_generate_messages" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="counter_node_generate_messages" CONFIG_NAME="Debug">
+      <envs />
+    </configuration>
+    <configuration name="counter_node_generate_messages_cpp" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="counter_node_generate_messages_cpp" CONFIG_NAME="Debug">
+      <envs />
+    </configuration>
+    <configuration name="counter_node_generate_messages_eus" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="counter_node_generate_messages_eus" CONFIG_NAME="Debug">
+      <envs />
+    </configuration>
+    <configuration name="counter_node_generate_messages_lisp" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="counter_node_generate_messages_lisp" CONFIG_NAME="Debug">
+      <envs />
+    </configuration>
+    <configuration name="counter_node_generate_messages_nodejs" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="counter_node_generate_messages_nodejs" CONFIG_NAME="Debug">
+      <envs />
+    </configuration>
+    <configuration name="counter_node_generate_messages_py" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="counter_node_generate_messages_py" CONFIG_NAME="Debug">
+      <envs />
+    </configuration>
+    <configuration name="counter_node_geneus" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="counter_node_geneus" CONFIG_NAME="Debug">
+      <envs />
+    </configuration>
+    <configuration name="counter_node_genlisp" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="counter_node_genlisp" CONFIG_NAME="Debug">
+      <envs />
+    </configuration>
+    <configuration name="counter_node_gennodejs" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="counter_node_gennodejs" CONFIG_NAME="Debug">
+      <envs />
+    </configuration>
+    <configuration name="counter_node_genpy" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="counter_node_genpy" CONFIG_NAME="Debug">
       <envs />
     </configuration>
     <configuration name="download_extra_data" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="download_extra_data" CONFIG_NAME="Debug">
@@ -319,7 +371,7 @@
     <configuration name="tests" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="tests" CONFIG_NAME="Debug">
       <envs />
     </configuration>
-    <list size="50">
+    <list size="62">
       <item index="0" class="java.lang.String" itemvalue="Application.Build All" />
       <item index="1" class="java.lang.String" itemvalue="Application.clean_test_results" />
       <item index="2" class="java.lang.String" itemvalue="Application.download_extra_data" />
@@ -339,37 +391,49 @@
       <item index="16" class="java.lang.String" itemvalue="Application.chatbot_node_genlisp" />
       <item index="17" class="java.lang.String" itemvalue="Application.chatbot_node_gennodejs" />
       <item index="18" class="java.lang.String" itemvalue="Application.chatbot_node_genpy" />
-      <item index="19" class="java.lang.String" itemvalue="Application.roscpp_generate_messages_cpp" />
-      <item index="20" class="java.lang.String" itemvalue="Application.roscpp_generate_messages_eus" />
-      <item index="21" class="java.lang.String" itemvalue="Application.roscpp_generate_messages_lisp" />
-      <item index="22" class="java.lang.String" itemvalue="Application.roscpp_generate_messages_nodejs" />
-      <item index="23" class="java.lang.String" itemvalue="Application.roscpp_generate_messages_py" />
-      <item index="24" class="java.lang.String" itemvalue="Application.rosgraph_msgs_generate_messages_cpp" />
-      <item index="25" class="java.lang.String" itemvalue="Application.rosgraph_msgs_generate_messages_eus" />
-      <item index="26" class="java.lang.String" itemvalue="Application.rosgraph_msgs_generate_messages_lisp" />
-      <item index="27" class="java.lang.String" itemvalue="Application.rosgraph_msgs_generate_messages_nodejs" />
-      <item index="28" class="java.lang.String" itemvalue="Application.rosgraph_msgs_generate_messages_py" />
-      <item index="29" class="java.lang.String" itemvalue="Application.std_msgs_generate_messages_cpp" />
-      <item index="30" class="java.lang.String" itemvalue="Application.std_msgs_generate_messages_eus" />
-      <item index="31" class="java.lang.String" itemvalue="Application.std_msgs_generate_messages_lisp" />
-      <item index="32" class="java.lang.String" itemvalue="Application.std_msgs_generate_messages_nodejs" />
-      <item index="33" class="java.lang.String" itemvalue="Application.std_msgs_generate_messages_py" />
-      <item index="34" class="java.lang.String" itemvalue="Application.counter_node" />
-      <item index="35" class="java.lang.String" itemvalue="Application._catkin_empty_exported_target" />
-      <item index="36" class="java.lang.String" itemvalue="Application._message_ui_generate_messages_check_deps_sent_msg" />
-      <item index="37" class="java.lang.String" itemvalue="Application.message_ui_gencpp" />
-      <item index="38" class="java.lang.String" itemvalue="Application.message_ui_generate_messages" />
-      <item index="39" class="java.lang.String" itemvalue="Application.message_ui_generate_messages_cpp" />
-      <item index="40" class="java.lang.String" itemvalue="Application.message_ui_generate_messages_eus" />
-      <item index="41" class="java.lang.String" itemvalue="Application.message_ui_generate_messages_lisp" />
-      <item index="42" class="java.lang.String" itemvalue="Application.message_ui_generate_messages_nodejs" />
-      <item index="43" class="java.lang.String" itemvalue="Application.message_ui_generate_messages_py" />
-      <item index="44" class="java.lang.String" itemvalue="Application.message_ui_geneus" />
-      <item index="45" class="java.lang.String" itemvalue="Application.message_ui_genlisp" />
-      <item index="46" class="java.lang.String" itemvalue="Application.message_ui_gennodejs" />
-      <item index="47" class="java.lang.String" itemvalue="Application.message_ui_genpy" />
-      <item index="48" class="java.lang.String" itemvalue="Application.gtest" />
-      <item index="49" class="java.lang.String" itemvalue="Application.gtest_main" />
+      <item index="19" class="java.lang.String" itemvalue="Application._counter_node_generate_messages_check_deps_counter" />
+      <item index="20" class="java.lang.String" itemvalue="Application.roscpp_generate_messages_cpp" />
+      <item index="21" class="java.lang.String" itemvalue="Application.roscpp_generate_messages_eus" />
+      <item index="22" class="java.lang.String" itemvalue="Application.roscpp_generate_messages_lisp" />
+      <item index="23" class="java.lang.String" itemvalue="Application.roscpp_generate_messages_nodejs" />
+      <item index="24" class="java.lang.String" itemvalue="Application.roscpp_generate_messages_py" />
+      <item index="25" class="java.lang.String" itemvalue="Application.rosgraph_msgs_generate_messages_cpp" />
+      <item index="26" class="java.lang.String" itemvalue="Application.rosgraph_msgs_generate_messages_eus" />
+      <item index="27" class="java.lang.String" itemvalue="Application.rosgraph_msgs_generate_messages_lisp" />
+      <item index="28" class="java.lang.String" itemvalue="Application.rosgraph_msgs_generate_messages_nodejs" />
+      <item index="29" class="java.lang.String" itemvalue="Application.rosgraph_msgs_generate_messages_py" />
+      <item index="30" class="java.lang.String" itemvalue="Application.std_msgs_generate_messages_cpp" />
+      <item index="31" class="java.lang.String" itemvalue="Application.std_msgs_generate_messages_eus" />
+      <item index="32" class="java.lang.String" itemvalue="Application.std_msgs_generate_messages_lisp" />
+      <item index="33" class="java.lang.String" itemvalue="Application.std_msgs_generate_messages_nodejs" />
+      <item index="34" class="java.lang.String" itemvalue="Application.std_msgs_generate_messages_py" />
+      <item index="35" class="java.lang.String" itemvalue="Application.counter_node" />
+      <item index="36" class="java.lang.String" itemvalue="Application.counter_node_gencpp" />
+      <item index="37" class="java.lang.String" itemvalue="Application.counter_node_generate_messages" />
+      <item index="38" class="java.lang.String" itemvalue="Application.counter_node_generate_messages_cpp" />
+      <item index="39" class="java.lang.String" itemvalue="Application.counter_node_generate_messages_eus" />
+      <item index="40" class="java.lang.String" itemvalue="Application.counter_node_generate_messages_lisp" />
+      <item index="41" class="java.lang.String" itemvalue="Application.counter_node_generate_messages_nodejs" />
+      <item index="42" class="java.lang.String" itemvalue="Application.counter_node_generate_messages_py" />
+      <item index="43" class="java.lang.String" itemvalue="Application.counter_node_geneus" />
+      <item index="44" class="java.lang.String" itemvalue="Application.counter_node_genlisp" />
+      <item index="45" class="java.lang.String" itemvalue="Application.counter_node_gennodejs" />
+      <item index="46" class="java.lang.String" itemvalue="Application.counter_node_genpy" />
+      <item index="47" class="java.lang.String" itemvalue="Application._catkin_empty_exported_target" />
+      <item index="48" class="java.lang.String" itemvalue="Application._message_ui_generate_messages_check_deps_sent_msg" />
+      <item index="49" class="java.lang.String" itemvalue="Application.message_ui_gencpp" />
+      <item index="50" class="java.lang.String" itemvalue="Application.message_ui_generate_messages" />
+      <item index="51" class="java.lang.String" itemvalue="Application.message_ui_generate_messages_cpp" />
+      <item index="52" class="java.lang.String" itemvalue="Application.message_ui_generate_messages_eus" />
+      <item index="53" class="java.lang.String" itemvalue="Application.message_ui_generate_messages_lisp" />
+      <item index="54" class="java.lang.String" itemvalue="Application.message_ui_generate_messages_nodejs" />
+      <item index="55" class="java.lang.String" itemvalue="Application.message_ui_generate_messages_py" />
+      <item index="56" class="java.lang.String" itemvalue="Application.message_ui_geneus" />
+      <item index="57" class="java.lang.String" itemvalue="Application.message_ui_genlisp" />
+      <item index="58" class="java.lang.String" itemvalue="Application.message_ui_gennodejs" />
+      <item index="59" class="java.lang.String" itemvalue="Application.message_ui_genpy" />
+      <item index="60" class="java.lang.String" itemvalue="Application.gtest" />
+      <item index="61" class="java.lang.String" itemvalue="Application.gtest_main" />
     </list>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
@@ -382,20 +446,19 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1506973031213</updated>
-      <workItem from="1506973032406" duration="5810000" />
+      <workItem from="1506973032406" duration="21523000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5810000" />
+    <option name="totallyTimeSpent" value="21523000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2498618" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.112216696" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3291536" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3197492" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -425,10 +488,34 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/counter_node/srv/counter.srv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/counter_node/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/chatbot_node/src/chatbot_node.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="27" column="2" lean-forward="false" selection-start-line="27" selection-start-column="2" selection-end-line="27" selection-end-column="2" />
+        <state relative-caret-position="36">
+          <caret line="62" column="0" lean-forward="true" selection-start-line="62" selection-start-column="0" selection-end-line="78" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/counter_node/src/counter_node.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="14" column="29" lean-forward="false" selection-start-line="14" selection-start-column="29" selection-end-line="14" selection-end-column="29" />
           <folding />
         </state>
       </provider>

@@ -56,30 +56,6 @@ CMAKE_BINARY_DIR = /home/divyak/catkin_ws/src/cmake-build-debug
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target install/strip
-install/strip: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/home/divyak/Documents/clion-2017.2.2/bin/cmake/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip
-
-# Special rule for the target install/strip
-install/strip/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/home/divyak/Documents/clion-2017.2.2/bin/cmake/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip/fast
-
-# Special rule for the target install/local
-install/local: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/home/divyak/Documents/clion-2017.2.2/bin/cmake/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local
-
-# Special rule for the target install/local
-install/local/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/home/divyak/Documents/clion-2017.2.2/bin/cmake/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local/fast
-
 # Special rule for the target install
 install: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
@@ -91,6 +67,17 @@ install/fast: preinstall/fast
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
 	/home/divyak/Documents/clion-2017.2.2/bin/cmake/bin/cmake -P cmake_install.cmake
 .PHONY : install/fast
+
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/home/divyak/Documents/clion-2017.2.2/bin/cmake/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
 
 # Special rule for the target edit_cache
 edit_cache:
@@ -114,6 +101,30 @@ test/fast: test
 
 .PHONY : test/fast
 
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/home/divyak/Documents/clion-2017.2.2/bin/cmake/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
+
+# Special rule for the target install/local
+install/local/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/home/divyak/Documents/clion-2017.2.2/bin/cmake/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local/fast
+
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/home/divyak/Documents/clion-2017.2.2/bin/cmake/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
+
+# Special rule for the target install/strip
+install/strip/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/home/divyak/Documents/clion-2017.2.2/bin/cmake/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip/fast
+
 # Special rule for the target list_install_components
 list_install_components:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
@@ -123,17 +134,6 @@ list_install_components:
 list_install_components/fast: list_install_components
 
 .PHONY : list_install_components/fast
-
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/home/divyak/Documents/clion-2017.2.2/bin/cmake/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -168,111 +168,6 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-chatbot_node/CMakeFiles/chatbot_node_generate_messages_nodejs.dir/rule:
-	cd /home/divyak/catkin_ws/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 chatbot_node/CMakeFiles/chatbot_node_generate_messages_nodejs.dir/rule
-.PHONY : chatbot_node/CMakeFiles/chatbot_node_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-chatbot_node_generate_messages_nodejs: chatbot_node/CMakeFiles/chatbot_node_generate_messages_nodejs.dir/rule
-
-.PHONY : chatbot_node_generate_messages_nodejs
-
-# fast build rule for target.
-chatbot_node_generate_messages_nodejs/fast:
-	cd /home/divyak/catkin_ws/src/cmake-build-debug && $(MAKE) -f chatbot_node/CMakeFiles/chatbot_node_generate_messages_nodejs.dir/build.make chatbot_node/CMakeFiles/chatbot_node_generate_messages_nodejs.dir/build
-.PHONY : chatbot_node_generate_messages_nodejs/fast
-
-# Convenience name for target.
-chatbot_node/CMakeFiles/chatbot_node_genlisp.dir/rule:
-	cd /home/divyak/catkin_ws/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 chatbot_node/CMakeFiles/chatbot_node_genlisp.dir/rule
-.PHONY : chatbot_node/CMakeFiles/chatbot_node_genlisp.dir/rule
-
-# Convenience name for target.
-chatbot_node_genlisp: chatbot_node/CMakeFiles/chatbot_node_genlisp.dir/rule
-
-.PHONY : chatbot_node_genlisp
-
-# fast build rule for target.
-chatbot_node_genlisp/fast:
-	cd /home/divyak/catkin_ws/src/cmake-build-debug && $(MAKE) -f chatbot_node/CMakeFiles/chatbot_node_genlisp.dir/build.make chatbot_node/CMakeFiles/chatbot_node_genlisp.dir/build
-.PHONY : chatbot_node_genlisp/fast
-
-# Convenience name for target.
-chatbot_node/CMakeFiles/std_msgs_generate_messages_py.dir/rule:
-	cd /home/divyak/catkin_ws/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 chatbot_node/CMakeFiles/std_msgs_generate_messages_py.dir/rule
-.PHONY : chatbot_node/CMakeFiles/std_msgs_generate_messages_py.dir/rule
-
-# Convenience name for target.
-std_msgs_generate_messages_py: chatbot_node/CMakeFiles/std_msgs_generate_messages_py.dir/rule
-
-.PHONY : std_msgs_generate_messages_py
-
-# fast build rule for target.
-std_msgs_generate_messages_py/fast:
-	cd /home/divyak/catkin_ws/src/cmake-build-debug && $(MAKE) -f chatbot_node/CMakeFiles/std_msgs_generate_messages_py.dir/build.make chatbot_node/CMakeFiles/std_msgs_generate_messages_py.dir/build
-.PHONY : std_msgs_generate_messages_py/fast
-
-# Convenience name for target.
-chatbot_node/CMakeFiles/chatbot_node_geneus.dir/rule:
-	cd /home/divyak/catkin_ws/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 chatbot_node/CMakeFiles/chatbot_node_geneus.dir/rule
-.PHONY : chatbot_node/CMakeFiles/chatbot_node_geneus.dir/rule
-
-# Convenience name for target.
-chatbot_node_geneus: chatbot_node/CMakeFiles/chatbot_node_geneus.dir/rule
-
-.PHONY : chatbot_node_geneus
-
-# fast build rule for target.
-chatbot_node_geneus/fast:
-	cd /home/divyak/catkin_ws/src/cmake-build-debug && $(MAKE) -f chatbot_node/CMakeFiles/chatbot_node_geneus.dir/build.make chatbot_node/CMakeFiles/chatbot_node_geneus.dir/build
-.PHONY : chatbot_node_geneus/fast
-
-# Convenience name for target.
-chatbot_node/CMakeFiles/roscpp_generate_messages_py.dir/rule:
-	cd /home/divyak/catkin_ws/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 chatbot_node/CMakeFiles/roscpp_generate_messages_py.dir/rule
-.PHONY : chatbot_node/CMakeFiles/roscpp_generate_messages_py.dir/rule
-
-# Convenience name for target.
-roscpp_generate_messages_py: chatbot_node/CMakeFiles/roscpp_generate_messages_py.dir/rule
-
-.PHONY : roscpp_generate_messages_py
-
-# fast build rule for target.
-roscpp_generate_messages_py/fast:
-	cd /home/divyak/catkin_ws/src/cmake-build-debug && $(MAKE) -f chatbot_node/CMakeFiles/roscpp_generate_messages_py.dir/build.make chatbot_node/CMakeFiles/roscpp_generate_messages_py.dir/build
-.PHONY : roscpp_generate_messages_py/fast
-
-# Convenience name for target.
-chatbot_node/CMakeFiles/chatbot_node_gencpp.dir/rule:
-	cd /home/divyak/catkin_ws/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 chatbot_node/CMakeFiles/chatbot_node_gencpp.dir/rule
-.PHONY : chatbot_node/CMakeFiles/chatbot_node_gencpp.dir/rule
-
-# Convenience name for target.
-chatbot_node_gencpp: chatbot_node/CMakeFiles/chatbot_node_gencpp.dir/rule
-
-.PHONY : chatbot_node_gencpp
-
-# fast build rule for target.
-chatbot_node_gencpp/fast:
-	cd /home/divyak/catkin_ws/src/cmake-build-debug && $(MAKE) -f chatbot_node/CMakeFiles/chatbot_node_gencpp.dir/build.make chatbot_node/CMakeFiles/chatbot_node_gencpp.dir/build
-.PHONY : chatbot_node_gencpp/fast
-
-# Convenience name for target.
-chatbot_node/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule:
-	cd /home/divyak/catkin_ws/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 chatbot_node/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule
-.PHONY : chatbot_node/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-rosgraph_msgs_generate_messages_eus: chatbot_node/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule
-
-.PHONY : rosgraph_msgs_generate_messages_eus
-
-# fast build rule for target.
-rosgraph_msgs_generate_messages_eus/fast:
-	cd /home/divyak/catkin_ws/src/cmake-build-debug && $(MAKE) -f chatbot_node/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build.make chatbot_node/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build
-.PHONY : rosgraph_msgs_generate_messages_eus/fast
-
-# Convenience name for target.
 chatbot_node/CMakeFiles/chatbot_node.dir/rule:
 	cd /home/divyak/catkin_ws/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 chatbot_node/CMakeFiles/chatbot_node.dir/rule
 .PHONY : chatbot_node/CMakeFiles/chatbot_node.dir/rule
@@ -286,246 +181,6 @@ chatbot_node: chatbot_node/CMakeFiles/chatbot_node.dir/rule
 chatbot_node/fast:
 	cd /home/divyak/catkin_ws/src/cmake-build-debug && $(MAKE) -f chatbot_node/CMakeFiles/chatbot_node.dir/build.make chatbot_node/CMakeFiles/chatbot_node.dir/build
 .PHONY : chatbot_node/fast
-
-# Convenience name for target.
-chatbot_node/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule:
-	cd /home/divyak/catkin_ws/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 chatbot_node/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
-.PHONY : chatbot_node/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
-
-# Convenience name for target.
-rosgraph_msgs_generate_messages_py: chatbot_node/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
-
-.PHONY : rosgraph_msgs_generate_messages_py
-
-# fast build rule for target.
-rosgraph_msgs_generate_messages_py/fast:
-	cd /home/divyak/catkin_ws/src/cmake-build-debug && $(MAKE) -f chatbot_node/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make chatbot_node/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build
-.PHONY : rosgraph_msgs_generate_messages_py/fast
-
-# Convenience name for target.
-chatbot_node/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule:
-	cd /home/divyak/catkin_ws/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 chatbot_node/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
-.PHONY : chatbot_node/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-rosgraph_msgs_generate_messages_lisp: chatbot_node/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
-
-.PHONY : rosgraph_msgs_generate_messages_lisp
-
-# fast build rule for target.
-rosgraph_msgs_generate_messages_lisp/fast:
-	cd /home/divyak/catkin_ws/src/cmake-build-debug && $(MAKE) -f chatbot_node/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build.make chatbot_node/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build
-.PHONY : rosgraph_msgs_generate_messages_lisp/fast
-
-# Convenience name for target.
-chatbot_node/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule:
-	cd /home/divyak/catkin_ws/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 chatbot_node/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule
-.PHONY : chatbot_node/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-roscpp_generate_messages_nodejs: chatbot_node/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule
-
-.PHONY : roscpp_generate_messages_nodejs
-
-# fast build rule for target.
-roscpp_generate_messages_nodejs/fast:
-	cd /home/divyak/catkin_ws/src/cmake-build-debug && $(MAKE) -f chatbot_node/CMakeFiles/roscpp_generate_messages_nodejs.dir/build.make chatbot_node/CMakeFiles/roscpp_generate_messages_nodejs.dir/build
-.PHONY : roscpp_generate_messages_nodejs/fast
-
-# Convenience name for target.
-chatbot_node/CMakeFiles/chatbot_node_gennodejs.dir/rule:
-	cd /home/divyak/catkin_ws/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 chatbot_node/CMakeFiles/chatbot_node_gennodejs.dir/rule
-.PHONY : chatbot_node/CMakeFiles/chatbot_node_gennodejs.dir/rule
-
-# Convenience name for target.
-chatbot_node_gennodejs: chatbot_node/CMakeFiles/chatbot_node_gennodejs.dir/rule
-
-.PHONY : chatbot_node_gennodejs
-
-# fast build rule for target.
-chatbot_node_gennodejs/fast:
-	cd /home/divyak/catkin_ws/src/cmake-build-debug && $(MAKE) -f chatbot_node/CMakeFiles/chatbot_node_gennodejs.dir/build.make chatbot_node/CMakeFiles/chatbot_node_gennodejs.dir/build
-.PHONY : chatbot_node_gennodejs/fast
-
-# Convenience name for target.
-chatbot_node/CMakeFiles/roscpp_generate_messages_eus.dir/rule:
-	cd /home/divyak/catkin_ws/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 chatbot_node/CMakeFiles/roscpp_generate_messages_eus.dir/rule
-.PHONY : chatbot_node/CMakeFiles/roscpp_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-roscpp_generate_messages_eus: chatbot_node/CMakeFiles/roscpp_generate_messages_eus.dir/rule
-
-.PHONY : roscpp_generate_messages_eus
-
-# fast build rule for target.
-roscpp_generate_messages_eus/fast:
-	cd /home/divyak/catkin_ws/src/cmake-build-debug && $(MAKE) -f chatbot_node/CMakeFiles/roscpp_generate_messages_eus.dir/build.make chatbot_node/CMakeFiles/roscpp_generate_messages_eus.dir/build
-.PHONY : roscpp_generate_messages_eus/fast
-
-# Convenience name for target.
-chatbot_node/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule:
-	cd /home/divyak/catkin_ws/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 chatbot_node/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule
-.PHONY : chatbot_node/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-std_msgs_generate_messages_nodejs: chatbot_node/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule
-
-.PHONY : std_msgs_generate_messages_nodejs
-
-# fast build rule for target.
-std_msgs_generate_messages_nodejs/fast:
-	cd /home/divyak/catkin_ws/src/cmake-build-debug && $(MAKE) -f chatbot_node/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build.make chatbot_node/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build
-.PHONY : std_msgs_generate_messages_nodejs/fast
-
-# Convenience name for target.
-chatbot_node/CMakeFiles/chatbot_node_generate_messages_cpp.dir/rule:
-	cd /home/divyak/catkin_ws/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 chatbot_node/CMakeFiles/chatbot_node_generate_messages_cpp.dir/rule
-.PHONY : chatbot_node/CMakeFiles/chatbot_node_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-chatbot_node_generate_messages_cpp: chatbot_node/CMakeFiles/chatbot_node_generate_messages_cpp.dir/rule
-
-.PHONY : chatbot_node_generate_messages_cpp
-
-# fast build rule for target.
-chatbot_node_generate_messages_cpp/fast:
-	cd /home/divyak/catkin_ws/src/cmake-build-debug && $(MAKE) -f chatbot_node/CMakeFiles/chatbot_node_generate_messages_cpp.dir/build.make chatbot_node/CMakeFiles/chatbot_node_generate_messages_cpp.dir/build
-.PHONY : chatbot_node_generate_messages_cpp/fast
-
-# Convenience name for target.
-chatbot_node/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule:
-	cd /home/divyak/catkin_ws/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 chatbot_node/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule
-.PHONY : chatbot_node/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-rosgraph_msgs_generate_messages_nodejs: chatbot_node/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule
-
-.PHONY : rosgraph_msgs_generate_messages_nodejs
-
-# fast build rule for target.
-rosgraph_msgs_generate_messages_nodejs/fast:
-	cd /home/divyak/catkin_ws/src/cmake-build-debug && $(MAKE) -f chatbot_node/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build.make chatbot_node/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build
-.PHONY : rosgraph_msgs_generate_messages_nodejs/fast
-
-# Convenience name for target.
-chatbot_node/CMakeFiles/chatbot_node_genpy.dir/rule:
-	cd /home/divyak/catkin_ws/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 chatbot_node/CMakeFiles/chatbot_node_genpy.dir/rule
-.PHONY : chatbot_node/CMakeFiles/chatbot_node_genpy.dir/rule
-
-# Convenience name for target.
-chatbot_node_genpy: chatbot_node/CMakeFiles/chatbot_node_genpy.dir/rule
-
-.PHONY : chatbot_node_genpy
-
-# fast build rule for target.
-chatbot_node_genpy/fast:
-	cd /home/divyak/catkin_ws/src/cmake-build-debug && $(MAKE) -f chatbot_node/CMakeFiles/chatbot_node_genpy.dir/build.make chatbot_node/CMakeFiles/chatbot_node_genpy.dir/build
-.PHONY : chatbot_node_genpy/fast
-
-# Convenience name for target.
-chatbot_node/CMakeFiles/roscpp_generate_messages_cpp.dir/rule:
-	cd /home/divyak/catkin_ws/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 chatbot_node/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
-.PHONY : chatbot_node/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-roscpp_generate_messages_cpp: chatbot_node/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
-
-.PHONY : roscpp_generate_messages_cpp
-
-# fast build rule for target.
-roscpp_generate_messages_cpp/fast:
-	cd /home/divyak/catkin_ws/src/cmake-build-debug && $(MAKE) -f chatbot_node/CMakeFiles/roscpp_generate_messages_cpp.dir/build.make chatbot_node/CMakeFiles/roscpp_generate_messages_cpp.dir/build
-.PHONY : roscpp_generate_messages_cpp/fast
-
-# Convenience name for target.
-chatbot_node/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule:
-	cd /home/divyak/catkin_ws/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 chatbot_node/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
-.PHONY : chatbot_node/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-rosgraph_msgs_generate_messages_cpp: chatbot_node/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
-
-.PHONY : rosgraph_msgs_generate_messages_cpp
-
-# fast build rule for target.
-rosgraph_msgs_generate_messages_cpp/fast:
-	cd /home/divyak/catkin_ws/src/cmake-build-debug && $(MAKE) -f chatbot_node/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make chatbot_node/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build
-.PHONY : rosgraph_msgs_generate_messages_cpp/fast
-
-# Convenience name for target.
-chatbot_node/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule:
-	cd /home/divyak/catkin_ws/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 chatbot_node/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
-.PHONY : chatbot_node/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-std_msgs_generate_messages_cpp: chatbot_node/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
-
-.PHONY : std_msgs_generate_messages_cpp
-
-# fast build rule for target.
-std_msgs_generate_messages_cpp/fast:
-	cd /home/divyak/catkin_ws/src/cmake-build-debug && $(MAKE) -f chatbot_node/CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make chatbot_node/CMakeFiles/std_msgs_generate_messages_cpp.dir/build
-.PHONY : std_msgs_generate_messages_cpp/fast
-
-# Convenience name for target.
-chatbot_node/CMakeFiles/roscpp_generate_messages_lisp.dir/rule:
-	cd /home/divyak/catkin_ws/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 chatbot_node/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
-.PHONY : chatbot_node/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-roscpp_generate_messages_lisp: chatbot_node/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
-
-.PHONY : roscpp_generate_messages_lisp
-
-# fast build rule for target.
-roscpp_generate_messages_lisp/fast:
-	cd /home/divyak/catkin_ws/src/cmake-build-debug && $(MAKE) -f chatbot_node/CMakeFiles/roscpp_generate_messages_lisp.dir/build.make chatbot_node/CMakeFiles/roscpp_generate_messages_lisp.dir/build
-.PHONY : roscpp_generate_messages_lisp/fast
-
-# Convenience name for target.
-chatbot_node/CMakeFiles/std_msgs_generate_messages_eus.dir/rule:
-	cd /home/divyak/catkin_ws/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 chatbot_node/CMakeFiles/std_msgs_generate_messages_eus.dir/rule
-.PHONY : chatbot_node/CMakeFiles/std_msgs_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-std_msgs_generate_messages_eus: chatbot_node/CMakeFiles/std_msgs_generate_messages_eus.dir/rule
-
-.PHONY : std_msgs_generate_messages_eus
-
-# fast build rule for target.
-std_msgs_generate_messages_eus/fast:
-	cd /home/divyak/catkin_ws/src/cmake-build-debug && $(MAKE) -f chatbot_node/CMakeFiles/std_msgs_generate_messages_eus.dir/build.make chatbot_node/CMakeFiles/std_msgs_generate_messages_eus.dir/build
-.PHONY : std_msgs_generate_messages_eus/fast
-
-# Convenience name for target.
-chatbot_node/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule:
-	cd /home/divyak/catkin_ws/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 chatbot_node/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
-.PHONY : chatbot_node/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-std_msgs_generate_messages_lisp: chatbot_node/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
-
-.PHONY : std_msgs_generate_messages_lisp
-
-# fast build rule for target.
-std_msgs_generate_messages_lisp/fast:
-	cd /home/divyak/catkin_ws/src/cmake-build-debug && $(MAKE) -f chatbot_node/CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make chatbot_node/CMakeFiles/std_msgs_generate_messages_lisp.dir/build
-.PHONY : std_msgs_generate_messages_lisp/fast
-
-# Convenience name for target.
-chatbot_node/CMakeFiles/chatbot_node_generate_messages.dir/rule:
-	cd /home/divyak/catkin_ws/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 chatbot_node/CMakeFiles/chatbot_node_generate_messages.dir/rule
-.PHONY : chatbot_node/CMakeFiles/chatbot_node_generate_messages.dir/rule
-
-# Convenience name for target.
-chatbot_node_generate_messages: chatbot_node/CMakeFiles/chatbot_node_generate_messages.dir/rule
-
-.PHONY : chatbot_node_generate_messages
-
-# fast build rule for target.
-chatbot_node_generate_messages/fast:
-	cd /home/divyak/catkin_ws/src/cmake-build-debug && $(MAKE) -f chatbot_node/CMakeFiles/chatbot_node_generate_messages.dir/build.make chatbot_node/CMakeFiles/chatbot_node_generate_messages.dir/build
-.PHONY : chatbot_node_generate_messages/fast
 
 # Convenience name for target.
 chatbot_node/CMakeFiles/chatbot_node_generate_messages_py.dir/rule:
@@ -543,6 +198,21 @@ chatbot_node_generate_messages_py/fast:
 .PHONY : chatbot_node_generate_messages_py/fast
 
 # Convenience name for target.
+chatbot_node/CMakeFiles/chatbot_node_generate_messages.dir/rule:
+	cd /home/divyak/catkin_ws/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 chatbot_node/CMakeFiles/chatbot_node_generate_messages.dir/rule
+.PHONY : chatbot_node/CMakeFiles/chatbot_node_generate_messages.dir/rule
+
+# Convenience name for target.
+chatbot_node_generate_messages: chatbot_node/CMakeFiles/chatbot_node_generate_messages.dir/rule
+
+.PHONY : chatbot_node_generate_messages
+
+# fast build rule for target.
+chatbot_node_generate_messages/fast:
+	cd /home/divyak/catkin_ws/src/cmake-build-debug && $(MAKE) -f chatbot_node/CMakeFiles/chatbot_node_generate_messages.dir/build.make chatbot_node/CMakeFiles/chatbot_node_generate_messages.dir/build
+.PHONY : chatbot_node_generate_messages/fast
+
+# Convenience name for target.
 chatbot_node/CMakeFiles/_chatbot_node_generate_messages_check_deps_reply_msg.dir/rule:
 	cd /home/divyak/catkin_ws/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 chatbot_node/CMakeFiles/_chatbot_node_generate_messages_check_deps_reply_msg.dir/rule
 .PHONY : chatbot_node/CMakeFiles/_chatbot_node_generate_messages_check_deps_reply_msg.dir/rule
@@ -556,6 +226,51 @@ _chatbot_node_generate_messages_check_deps_reply_msg: chatbot_node/CMakeFiles/_c
 _chatbot_node_generate_messages_check_deps_reply_msg/fast:
 	cd /home/divyak/catkin_ws/src/cmake-build-debug && $(MAKE) -f chatbot_node/CMakeFiles/_chatbot_node_generate_messages_check_deps_reply_msg.dir/build.make chatbot_node/CMakeFiles/_chatbot_node_generate_messages_check_deps_reply_msg.dir/build
 .PHONY : _chatbot_node_generate_messages_check_deps_reply_msg/fast
+
+# Convenience name for target.
+chatbot_node/CMakeFiles/chatbot_node_generate_messages_cpp.dir/rule:
+	cd /home/divyak/catkin_ws/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 chatbot_node/CMakeFiles/chatbot_node_generate_messages_cpp.dir/rule
+.PHONY : chatbot_node/CMakeFiles/chatbot_node_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+chatbot_node_generate_messages_cpp: chatbot_node/CMakeFiles/chatbot_node_generate_messages_cpp.dir/rule
+
+.PHONY : chatbot_node_generate_messages_cpp
+
+# fast build rule for target.
+chatbot_node_generate_messages_cpp/fast:
+	cd /home/divyak/catkin_ws/src/cmake-build-debug && $(MAKE) -f chatbot_node/CMakeFiles/chatbot_node_generate_messages_cpp.dir/build.make chatbot_node/CMakeFiles/chatbot_node_generate_messages_cpp.dir/build
+.PHONY : chatbot_node_generate_messages_cpp/fast
+
+# Convenience name for target.
+chatbot_node/CMakeFiles/chatbot_node_gencpp.dir/rule:
+	cd /home/divyak/catkin_ws/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 chatbot_node/CMakeFiles/chatbot_node_gencpp.dir/rule
+.PHONY : chatbot_node/CMakeFiles/chatbot_node_gencpp.dir/rule
+
+# Convenience name for target.
+chatbot_node_gencpp: chatbot_node/CMakeFiles/chatbot_node_gencpp.dir/rule
+
+.PHONY : chatbot_node_gencpp
+
+# fast build rule for target.
+chatbot_node_gencpp/fast:
+	cd /home/divyak/catkin_ws/src/cmake-build-debug && $(MAKE) -f chatbot_node/CMakeFiles/chatbot_node_gencpp.dir/build.make chatbot_node/CMakeFiles/chatbot_node_gencpp.dir/build
+.PHONY : chatbot_node_gencpp/fast
+
+# Convenience name for target.
+chatbot_node/CMakeFiles/chatbot_node_genpy.dir/rule:
+	cd /home/divyak/catkin_ws/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 chatbot_node/CMakeFiles/chatbot_node_genpy.dir/rule
+.PHONY : chatbot_node/CMakeFiles/chatbot_node_genpy.dir/rule
+
+# Convenience name for target.
+chatbot_node_genpy: chatbot_node/CMakeFiles/chatbot_node_genpy.dir/rule
+
+.PHONY : chatbot_node_genpy
+
+# fast build rule for target.
+chatbot_node_genpy/fast:
+	cd /home/divyak/catkin_ws/src/cmake-build-debug && $(MAKE) -f chatbot_node/CMakeFiles/chatbot_node_genpy.dir/build.make chatbot_node/CMakeFiles/chatbot_node_genpy.dir/build
+.PHONY : chatbot_node_genpy/fast
 
 # Convenience name for target.
 chatbot_node/CMakeFiles/chatbot_node_generate_messages_eus.dir/rule:
@@ -573,6 +288,51 @@ chatbot_node_generate_messages_eus/fast:
 .PHONY : chatbot_node_generate_messages_eus/fast
 
 # Convenience name for target.
+chatbot_node/CMakeFiles/chatbot_node_geneus.dir/rule:
+	cd /home/divyak/catkin_ws/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 chatbot_node/CMakeFiles/chatbot_node_geneus.dir/rule
+.PHONY : chatbot_node/CMakeFiles/chatbot_node_geneus.dir/rule
+
+# Convenience name for target.
+chatbot_node_geneus: chatbot_node/CMakeFiles/chatbot_node_geneus.dir/rule
+
+.PHONY : chatbot_node_geneus
+
+# fast build rule for target.
+chatbot_node_geneus/fast:
+	cd /home/divyak/catkin_ws/src/cmake-build-debug && $(MAKE) -f chatbot_node/CMakeFiles/chatbot_node_geneus.dir/build.make chatbot_node/CMakeFiles/chatbot_node_geneus.dir/build
+.PHONY : chatbot_node_geneus/fast
+
+# Convenience name for target.
+chatbot_node/CMakeFiles/chatbot_node_genlisp.dir/rule:
+	cd /home/divyak/catkin_ws/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 chatbot_node/CMakeFiles/chatbot_node_genlisp.dir/rule
+.PHONY : chatbot_node/CMakeFiles/chatbot_node_genlisp.dir/rule
+
+# Convenience name for target.
+chatbot_node_genlisp: chatbot_node/CMakeFiles/chatbot_node_genlisp.dir/rule
+
+.PHONY : chatbot_node_genlisp
+
+# fast build rule for target.
+chatbot_node_genlisp/fast:
+	cd /home/divyak/catkin_ws/src/cmake-build-debug && $(MAKE) -f chatbot_node/CMakeFiles/chatbot_node_genlisp.dir/build.make chatbot_node/CMakeFiles/chatbot_node_genlisp.dir/build
+.PHONY : chatbot_node_genlisp/fast
+
+# Convenience name for target.
+chatbot_node/CMakeFiles/chatbot_node_generate_messages_nodejs.dir/rule:
+	cd /home/divyak/catkin_ws/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 chatbot_node/CMakeFiles/chatbot_node_generate_messages_nodejs.dir/rule
+.PHONY : chatbot_node/CMakeFiles/chatbot_node_generate_messages_nodejs.dir/rule
+
+# Convenience name for target.
+chatbot_node_generate_messages_nodejs: chatbot_node/CMakeFiles/chatbot_node_generate_messages_nodejs.dir/rule
+
+.PHONY : chatbot_node_generate_messages_nodejs
+
+# fast build rule for target.
+chatbot_node_generate_messages_nodejs/fast:
+	cd /home/divyak/catkin_ws/src/cmake-build-debug && $(MAKE) -f chatbot_node/CMakeFiles/chatbot_node_generate_messages_nodejs.dir/build.make chatbot_node/CMakeFiles/chatbot_node_generate_messages_nodejs.dir/build
+.PHONY : chatbot_node_generate_messages_nodejs/fast
+
+# Convenience name for target.
 chatbot_node/CMakeFiles/chatbot_node_generate_messages_lisp.dir/rule:
 	cd /home/divyak/catkin_ws/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 chatbot_node/CMakeFiles/chatbot_node_generate_messages_lisp.dir/rule
 .PHONY : chatbot_node/CMakeFiles/chatbot_node_generate_messages_lisp.dir/rule
@@ -586,6 +346,21 @@ chatbot_node_generate_messages_lisp: chatbot_node/CMakeFiles/chatbot_node_genera
 chatbot_node_generate_messages_lisp/fast:
 	cd /home/divyak/catkin_ws/src/cmake-build-debug && $(MAKE) -f chatbot_node/CMakeFiles/chatbot_node_generate_messages_lisp.dir/build.make chatbot_node/CMakeFiles/chatbot_node_generate_messages_lisp.dir/build
 .PHONY : chatbot_node_generate_messages_lisp/fast
+
+# Convenience name for target.
+chatbot_node/CMakeFiles/chatbot_node_gennodejs.dir/rule:
+	cd /home/divyak/catkin_ws/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 chatbot_node/CMakeFiles/chatbot_node_gennodejs.dir/rule
+.PHONY : chatbot_node/CMakeFiles/chatbot_node_gennodejs.dir/rule
+
+# Convenience name for target.
+chatbot_node_gennodejs: chatbot_node/CMakeFiles/chatbot_node_gennodejs.dir/rule
+
+.PHONY : chatbot_node_gennodejs
+
+# fast build rule for target.
+chatbot_node_gennodejs/fast:
+	cd /home/divyak/catkin_ws/src/cmake-build-debug && $(MAKE) -f chatbot_node/CMakeFiles/chatbot_node_gennodejs.dir/build.make chatbot_node/CMakeFiles/chatbot_node_gennodejs.dir/build
+.PHONY : chatbot_node_gennodejs/fast
 
 src/chatbot_node.o: src/chatbot_node.cpp.o
 
@@ -620,41 +395,26 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... install/strip"
-	@echo "... install/local"
 	@echo "... install"
+	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... test"
-	@echo "... chatbot_node_generate_messages_nodejs"
-	@echo "... chatbot_node_genlisp"
-	@echo "... std_msgs_generate_messages_py"
-	@echo "... chatbot_node_geneus"
-	@echo "... roscpp_generate_messages_py"
-	@echo "... chatbot_node_gencpp"
-	@echo "... rosgraph_msgs_generate_messages_eus"
+	@echo "... install/local"
 	@echo "... chatbot_node"
-	@echo "... rosgraph_msgs_generate_messages_py"
-	@echo "... rosgraph_msgs_generate_messages_lisp"
-	@echo "... roscpp_generate_messages_nodejs"
-	@echo "... chatbot_node_gennodejs"
-	@echo "... roscpp_generate_messages_eus"
-	@echo "... std_msgs_generate_messages_nodejs"
-	@echo "... chatbot_node_generate_messages_cpp"
-	@echo "... rosgraph_msgs_generate_messages_nodejs"
-	@echo "... chatbot_node_genpy"
-	@echo "... roscpp_generate_messages_cpp"
-	@echo "... rosgraph_msgs_generate_messages_cpp"
-	@echo "... std_msgs_generate_messages_cpp"
-	@echo "... roscpp_generate_messages_lisp"
-	@echo "... std_msgs_generate_messages_eus"
-	@echo "... std_msgs_generate_messages_lisp"
-	@echo "... list_install_components"
-	@echo "... chatbot_node_generate_messages"
-	@echo "... rebuild_cache"
 	@echo "... chatbot_node_generate_messages_py"
+	@echo "... chatbot_node_generate_messages"
 	@echo "... _chatbot_node_generate_messages_check_deps_reply_msg"
+	@echo "... chatbot_node_generate_messages_cpp"
+	@echo "... chatbot_node_gencpp"
+	@echo "... chatbot_node_genpy"
 	@echo "... chatbot_node_generate_messages_eus"
+	@echo "... chatbot_node_geneus"
+	@echo "... chatbot_node_genlisp"
+	@echo "... chatbot_node_generate_messages_nodejs"
+	@echo "... install/strip"
+	@echo "... list_install_components"
 	@echo "... chatbot_node_generate_messages_lisp"
+	@echo "... chatbot_node_gennodejs"
 	@echo "... src/chatbot_node.o"
 	@echo "... src/chatbot_node.i"
 	@echo "... src/chatbot_node.s"
