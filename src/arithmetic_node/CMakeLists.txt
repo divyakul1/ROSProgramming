@@ -165,6 +165,7 @@ include_directories(
 ## Add folders to be run by python nosetests
 # catkin_add_nosetests(test)
 
+add_compile_options(-std=c++11)
 add_executable(arithmetic_node src/arithmetic_node.cpp)
 add_dependencies(arithmetic_node ${catkin_EXPORTED_TARGETS})
 add_dependencies(arithmetic_node message_ui_generate_messages_cpp)

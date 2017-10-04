@@ -13,6 +13,7 @@ using namespace std;
 //ros::NodeHandle n;
 
 ros::Publisher pub;
+string name1;
 
 //ros::Publisher pub = n.advertise<chatbot_node::reply_msg>("reply_msg", 1000);
 
@@ -27,13 +28,15 @@ void sent_msg_callback(const message_ui::sent_msg mess) {
     //cout<< message.message;
 
 
+
+
     if (isalpha(mess.message[1])) {
 
         if (mess.message.compare("Hello") == 0) {
 
             //std:string name=ros::param::get("Name");
 
-            replymessage = "Hello Divya";
+            replymessage = "Hello "+ name1;
             //std::cout << replymessage << '\n';
         } else if (mess.message.compare("What is your name?") == 0) {
 
@@ -68,6 +71,9 @@ int main(int argc, char **argv) {
 
   pub =n.advertise<chatbot_node::reply_msg>("reply_msg", 1000);
   ros::Subscriber sub = n.subscribe("sent_msg", 1000, sent_msg_callback);
+
+
+    n.getParam("name",name1);
 
 
   ros::Rate loop_rate(20);
