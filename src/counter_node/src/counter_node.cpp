@@ -4,7 +4,7 @@
 #include "counter_node/counter.h"
 //#include "counter_node/counterRequest.h"
 //#include "counter_node/counterResponse.h"
-// #include <arithmetic_node/arithmetic_reply.h>
+#include <arithmetic_node/arithmetic_reply.h>
 
 int num_reply_msg = 0;
 int num_sent_msg = 0;
@@ -27,14 +27,16 @@ void sent_msg_callback(const message_ui::sent_msg msg)
 void reply_msg_callback(const chatbot_node::reply_msg msg)
 {
 	num_reply_msg++;
-	last_reply_msg_time = msg.header.stamp;
+	//last_reply_msg_time = msg.header.stamp;
+    last_reply_msg_time = ros::Time::now();
 }
 
-// void arithmetic_reply_msg_callback(const arithmetic_node::arithmetic_reply msg)
-// {
-// 	num_reply_msg++;
-// 	last_reply_msg_time = msg.header.stamp;
-// }
+void arithmetic_reply_msg_callback(const arithmetic_node::arithmetic_reply msg)
+{
+	num_reply_msg++;
+	//last_reply_msg_time = msg.header.stamp;
+    last_reply_msg_time = ros::Time::now();
+ }
 
 
 bool doyothing(counter_node::counter::Request &req,
@@ -65,18 +67,19 @@ bool doyothing(counter_node::counter::Request &req,
     else if (req.req_id ==3){
 
         //Time elapsed since last reply message
+        double now = ros::Time::now().toSec();
 
-        ros::Time now = ros::Time::now();
-        //res.reply=short(now);
+        res.reply=now-last_reply_msg_time.toSec();
         return true;
 
 
     }
 
     else if (req.req_id ==4){
-        //ros::Time now = ros::Time::now();
 
-        //res.reply=now-last_sent_msg_time;
+        double now = ros::Time::now().toSec();
+
+        res.reply=now-last_sent_msg_time.toSec();
         return true;
 
     }
@@ -91,7 +94,7 @@ int main(int argc, char **argv) {
   reply_msg_sub = n.subscribe("reply_msg", 1000, reply_msg_callback);
   sent_msg_sub = n.subscribe("sent_msg", 1000, sent_msg_callback);
 
-  // arithmetic_reply_msg_sub = n.subscribe("arithmetic_reply", 1000, arithmetic_reply_msg_callback);
+  arithmetic_reply_msg_sub = n.subscribe("arithmetic_reply", 1000, arithmetic_reply_msg_callback);
 
     // if request id is 0 then
 

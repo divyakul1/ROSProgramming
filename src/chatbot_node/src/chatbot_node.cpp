@@ -20,47 +20,44 @@ ros::Publisher pub;
 
 //callback for the subsriber 
 
-void sent_msg_callback(const message_ui::sent_msg mess)
-{
-	//message=sent_msg.message;
-  //std::cout << "I heard" << std::endl;
-  //std::cout << mess.message<< std::endl;
-	//cout<< message.message;
-
-  if (mess.message.compare("Hello") == 0) {
-
-    //std:string name=ros::param::get("Name");
-
-    replymessage = "Hello Divya";
-    //std::cout << replymessage << '\n';
-  }
-
-  else if (mess.message.compare("What is your name?")==0) {
-
-    replymessage = "My name is MRSD Siri";
-    //std::cout << replymessage << '\n';
-  }
-
-  else if (mess.message.compare("How are you?")==0)
-  {
-    replymessage = "I am fine, thank you";
-    //std::cout << replymessage << '\n';
-  }
-
-  else{
-
-    replymessage = "I didn't get that";
-    //std::cout << replymessage << '\n';
-
-  }
+void sent_msg_callback(const message_ui::sent_msg mess) {
+    //message=sent_msg.message;
+    //std::cout << "I heard" << std::endl;
+    //std::cout << mess.message<< std::endl;
+    //cout<< message.message;
 
 
-  chatbot_node::reply_msg response;
-  response.message = replymessage;
+    if (isalpha(mess.message[1])) {
 
-  pub.publish(response);
+        if (mess.message.compare("Hello") == 0) {
+
+            //std:string name=ros::param::get("Name");
+
+            replymessage = "Hello Divya";
+            //std::cout << replymessage << '\n';
+        } else if (mess.message.compare("What is your name?") == 0) {
+
+            replymessage = "My name is MRSD Siri";
+            //std::cout << replymessage << '\n';
+        } else if (mess.message.compare("How are you?") == 0) {
+            replymessage = "I am fine, thank you";
+            //std::cout << replymessage << '\n';
+        } else {
 
 
+            replymessage = "I didn't get that";
+            //std::cout << replymessage << '\n';
+
+        }
+
+
+        chatbot_node::reply_msg response;
+        response.message = replymessage;
+
+        pub.publish(response);
+
+
+    }
 }
 
 int main(int argc, char **argv) {

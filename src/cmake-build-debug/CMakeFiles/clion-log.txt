@@ -13,12 +13,17 @@
 -- catkin 0.7.6
 -- BUILD_SHARED_LIBS is on
 -- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
--- ~~  traversing 4 packages in topological order:
+-- ~~  traversing 5 packages in topological order:
+-- ~~  - arithmetic_node
 -- ~~  - beginner_tutorials
 -- ~~  - chatbot_node
 -- ~~  - counter_node
 -- ~~  - message_ui
 -- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-- +++ processing catkin package: 'arithmetic_node'
+-- ==> add_subdirectory(arithmetic_node)
+-- Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
+-- arithmetic_node: 1 messages, 0 services
 -- +++ processing catkin package: 'beginner_tutorials'
 -- ==> add_subdirectory(beginner_tutorials)
 -- +++ processing catkin package: 'chatbot_node'
